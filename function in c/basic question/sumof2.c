@@ -18,5 +18,4 @@ int sum = add(a,b) ; // add function return value a+b which is store in sum vari
 printf("sum = %d",sum);
 return;
 
-
 }
