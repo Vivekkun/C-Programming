@@ -1,0 +1,31 @@
+#include<stdio.h>
+
+int factorial(int x){
+    int fact=1;
+    for(int i=2; i<=x ; i++){
+        fact = fact*i;
+    }
+    return fact;
+}
+
+int main (){
+    int n,r ;
+    printf("enter n =");
+    scanf("%d",&n);
+    printf("enter r =");
+    scanf("%d",&r);
+
+    if(n<0 || r<0 || r > n){
+        printf("invalid input");
+    }
+    else{ 
+        int nfact = factorial(n);
+        int rfact = factorial(r);
+        int nrfact = factorial(n-r);
+
+        int ncr = nfact/(rfact*nrfact);
+        printf("%d", ncr);
+
+    }
+    return 0;
+}
